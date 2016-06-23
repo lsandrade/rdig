@@ -57,4 +57,12 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+  # Criando a primeira versão da nossa API acessivel pela URL /api/v1/...
+  namespace :api do 
+    namespace :v1 do
+      resources :contacts
+    end
+  end
 end

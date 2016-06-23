@@ -40,3 +40,8 @@ gem 'puma', group: :production
 
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+gem 'byebug'
+gem 'rspec-rails', '~> 3.4'
+
+gem 'responders', '~> 2.0' 
