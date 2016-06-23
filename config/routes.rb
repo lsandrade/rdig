@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :segments
+  resources :criteria
+  resources :criteria
+  resources :criteria
+  resources :operators
   resources :contacts
   resources :widgets
 
