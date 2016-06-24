@@ -4,7 +4,7 @@ RSpec.describe "operators/edit", type: :view do
   before(:each) do
     @operator = assign(:operator, Operator.create!(
       :name => "MyString",
-      :type => ""
+      :category => ""
     ))
   end
 
@@ -15,7 +15,7 @@ RSpec.describe "operators/edit", type: :view do
 
       assert_select "input#operator_name[name=?]", "operator[name]"
 
-      assert_select "input#operator_type[name=?]", "operator[type]"
+      assert_select "input#operator_category[name=?]", "operator[category]"
     end
   end
 end
