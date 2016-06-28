@@ -2,13 +2,29 @@
 <div class="alert alert-success" role="alert"><%= notice %></div>
 
 <p>
-  <strong>Name:</strong>
-  <%= @segment.name %>
+	<strong>Name:</strong>
+	<%= @segment.name %>
 </p>
 
 <p>
-  <strong>Criteria:</strong>
-  Lista de critérios
+	<strong>Criteria:</strong>
+	Lista de critérios
+	<table class="table table-striped">
+		<thead>
+			<td>Field</td>
+			<td>Operator</td>
+			<td>Value</td>
+		</thead>
+		<tbody>
+			<% @criteria.each do |criteria| %>
+
+				<td><%= criteria.name %></td>
+				<td><%= criteria.operator_id %></td>
+				<td><%= criteria.value %></td>
+
+			<% end %>
+		</tbody>
+	</table>
 </p>
 
 <%= link_to 'Edit', edit_segment_path(@segment), class:"btn btn-success" %> |

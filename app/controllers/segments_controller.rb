@@ -10,6 +10,7 @@ class SegmentsController < ApplicationController
   # GET /segments/1
   # GET /segments/1.json
   def show
+    @criteria = Criterium.where("segment_id = ?",@segment.id)
   end
 
   def add

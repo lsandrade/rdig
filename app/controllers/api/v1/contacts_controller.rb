@@ -28,5 +28,9 @@ class Api::V1::ContactsController < Api::V1::BaseController
 		render json: contact
 	end
 
+	def get_segmented
+		
+	end
+
 
 end
