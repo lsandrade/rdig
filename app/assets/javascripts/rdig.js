@@ -17,20 +17,20 @@ var addCriterium = function()
 	var criterium = $("#criterium"+criteriumIdx);
 
 	//add Field of criterium. ex: Name, Age, etc
-	criterium.append($("<label for='criteria[field"+criteriumIdx+"]'>Field #"+criteriumIdx+"</label>"));
-	criterium.append($("<select name='criteria[field"+criteriumIdx+"]' id='field"+criteriumIdx+"' class='form-control'>"));
+	criterium.append($("<label for='criteria["+criteriumIdx+"][field]'>Field #"+criteriumIdx+"</label>"));
+	criterium.append($("<select name='criteria["+criteriumIdx+"][field]' id='field"+criteriumIdx+"' class='form-control'>"));
 
 	fillField("field"+criteriumIdx);
 
 	//add operator. ex: equal..
-	criterium.append($("<label for='criteria[operator"+criteriumIdx+"]'>Operator #"+criteriumIdx+"</label>"));
-	criterium.append($("<select id='operator"+criteriumIdx+"' name='criteria[operator"+criteriumIdx+"]' class='form-control'>"));
+	criterium.append($("<label for='criteria["+criteriumIdx+"][operator]'>Operator #"+criteriumIdx+"</label>"));
+	criterium.append($("<select id='operator"+criteriumIdx+"' name='criteria["+criteriumIdx+"][operator]' class='form-control'>"));
 
 	fillOperator("operator"+criteriumIdx);
 
 	//add Value of criteria. Ex: 1, 200, 'Rambo'...
-	criterium.append($("<label for='criteria[value"+criteriumIdx+"]'>Value #"+criteriumIdx+"</label>"));
-	criterium.append($("<input type='text' name='criteria[value"+criteriumIdx+"]' class='form-control'>"));
+	criterium.append($("<label for='criteria["+criteriumIdx+"][value]'>Value #"+criteriumIdx+"</label>"));
+	criterium.append($("<input type='text' name='criteria["+criteriumIdx+"][value]' class='form-control'>"));
 
 
 	//Remove criterium
@@ -55,11 +55,11 @@ var fillField = function(identifier)
 {
 	var field = $("#"+identifier);
 	field.append(
-		$("<option value='1'>Name</option>"
-		+"<option value='2'>E-mail</option>"
-		+"<option value='3'>Age</option>"
-		+"<option value='4'>State</option>"
-		+"<option value='5'>Job</option>"
+		$("<option value='name'>Name</option>"
+		+"<option value='email'>E-mail</option>"
+		+"<option value='age'>Age</option>"
+		+"<option value='uf'>State</option>"
+		+"<option value='job'>Job</option>"
 		));
 }
 

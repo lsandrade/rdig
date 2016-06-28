@@ -3,16 +3,39 @@
     <a class="nav-link active" href="/">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="contacts">Contacts</a>
+    <a class="nav-link" href="contacts">All Contacts</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="segments">Custom Segments</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
+    <a class="nav-link" href="segments/add">New custom segment</a>
   </li>
 </ul>
 
 <hr>
+<form action="#">
+  <h2>Segment your data</h2>
+  <label for="criterium">Criterium of segmentation</label>
+  <select name="criterium" id="criterium" class="form-control">
+    <option value="1">Criterium 1</option>
+  </select>
+  <button type="submit" class="btn btn-success">Send</button>
+</form>
+<hr>
+<h2>Segmented data</h2>
 
-Asdf
+<table class="table table-striped" id="segdata">
+  
+  <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>E-mail</td>
+    <td>Age</td>
+    <td>State</td>
+    <td>Job</td>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table>

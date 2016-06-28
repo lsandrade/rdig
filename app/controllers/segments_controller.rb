@@ -30,10 +30,22 @@ class SegmentsController < ApplicationController
   def create
     @segment = Segment.new(segment_params)
 
-    print params[:criteria]
     if @segment.valid?
+      @segment.save
+      
+      for @criterium in params[:criteria] do
+        criterium = Criterium.new(name:@criterium[1]['field'], operator_id:@criterium[1]['operator'], value:@criterium[1]['value'], segment_id:@segment.id)
+        
+        if criterium.valid?
+          criterium.save
+        end
+      end
 
-      #respond_with(contact, :location => api_v1_segment_path(contact))
+      respond_to do |format|
+        format.html { redirect_to @segment, notice: 'Segment was successfully created.' }
+        format.json { render :show, status: :created, location: @segment }
+      end
+    
     else
       respond_with(segment)
     end
