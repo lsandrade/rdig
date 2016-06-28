@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'segments/add'
+
   resources :segments
   resources :criteria
   resources :criteria

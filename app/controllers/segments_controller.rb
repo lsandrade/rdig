@@ -12,6 +12,10 @@ class SegmentsController < ApplicationController
   def show
   end
 
+  def add
+    @segment = Segment.new
+  end
+
   # GET /segments/new
   def new
     @segment = Segment.new
