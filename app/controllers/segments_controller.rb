@@ -30,7 +30,15 @@ class SegmentsController < ApplicationController
   def create
     @segment = Segment.new(segment_params)
 
-    respond_to do |format|
+    print params[:criteria]
+    if @segment.valid?
+
+      #respond_with(contact, :location => api_v1_segment_path(contact))
+    else
+      respond_with(segment)
+    end
+
+"""    respond_to do |format|
       if @segment.save
         format.html { redirect_to @segment, notice: 'Segment was successfully created.' }
         format.json { render :show, status: :created, location: @segment }
@@ -39,7 +47,7 @@ class SegmentsController < ApplicationController
         format.json { render json: @segment.errors, status: :unprocessable_entity }
       end
     end
-  end
+"""  end
 
   # PATCH/PUT /segments/1
   # PATCH/PUT /segments/1.json

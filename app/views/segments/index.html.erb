@@ -2,7 +2,7 @@
 
 <h1>Listing Segments</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,9 +15,10 @@
     <% @segments.each do |segment| %>
       <tr>
         <td><%= segment.name %></td>
-        <td><%= link_to 'Show', segment %></td>
-        <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
-        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>List of criteria</td>
+        <td><%= link_to 'Show', segment, class:'btn btn-info' %></td>
+        <td><%= link_to 'Edit', edit_segment_path(segment), class:'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Segment', new_segment_path %>
+<%= link_to 'New Segment', action: :add %>

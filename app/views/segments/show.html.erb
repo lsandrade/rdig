@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+
+<div class="alert alert-success" role="alert"><%= notice %></div>
 
 <p>
   <strong>Name:</strong>
@@ -10,5 +11,5 @@
   Lista de critérios
 </p>
 
-<%= link_to 'Edit', edit_segment_path(@segment) %> |
-<%= link_to 'Back', segments_path %>
+<%= link_to 'Edit', edit_segment_path(@segment), class:"btn btn-success" %> |
+<%= link_to 'Back', segments_path, class:"btn btn-secondary" %>
