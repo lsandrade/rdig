@@ -15,7 +15,6 @@
     <% @segments.each do |segment| %>
       <tr>
         <td><%= segment.name %></td>
-        <td><%= segment.criterium_id %></td>
         <td><%= link_to 'Show', segment %></td>
         <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
         <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
