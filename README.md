@@ -14,6 +14,11 @@ $ bundle exec rake db:create db:migrate
 $ rails server
 ```
 
+Testing
+```
+$ rake spec
+```
+
 Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 Don't forget to config your database credentials in rdig/config/database.yml
