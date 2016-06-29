@@ -4,7 +4,6 @@ RSpec.describe "segments/show", type: :view do
   before(:each) do
     @segment = assign(:segment, Segment.create!(
       :name => "Name",
-      :criterium_id => 1
     ))
   end
 

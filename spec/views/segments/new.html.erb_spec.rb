@@ -4,7 +4,6 @@ RSpec.describe "segments/new", type: :view do
   before(:each) do
     assign(:segment, Segment.new(
       :name => "MyString",
-      :criterium_id => 1
     ))
   end
 
@@ -15,7 +14,6 @@ RSpec.describe "segments/new", type: :view do
 
       assert_select "input#segment_name[name=?]", "segment[name]"
 
-      assert_select "input#segment_criterium_id[name=?]", "segment[criterium_id]"
     end
   end
 end

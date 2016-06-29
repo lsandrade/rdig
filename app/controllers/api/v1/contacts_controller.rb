@@ -27,10 +27,17 @@ class Api::V1::ContactsController < Api::V1::BaseController
 		contact = Contact.find_by_id(params[:id])
 		render json: contact
 	end
-
+'''
 	def get_segmented
-		
-	end
 
+		segment = Segment.where("id = ",params[:citerium])
+
+		criteria = Criterium.where("segment_id = ",segment.id)
+
+		for citerium in criteria
+			print criterium
+		end
+	end
+'''
 
 end

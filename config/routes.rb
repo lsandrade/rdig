@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :criteria
   resources :operators
   resources :contacts
+  get "contacts/get_segmented" => "contacts#get_segmented"
+
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -73,4 +75,7 @@ Rails.application.routes.draw do
       resources :contacts
     end
   end
+
+
+
 end

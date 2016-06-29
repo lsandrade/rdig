@@ -76,16 +76,21 @@ var fillOperator = function(identifier){
 			));
 }
 
-var url = '/segments.json';
-$.ajax({
-	method: 'GET',
-	url: url
+$( document ).ready(function() {
+	var url = '/segments.json';
+	$.ajax({
+		method: 'GET',
+		url: url
 
-})
-.done(function(segments)
-{
-	$.each(segments, function(i,seg) {
-		$("#criterium").append($("<option>").val(seg.id).html(seg.name));
+	})
+	.done(function(segments)
+	{
+		$.each(segments, function(i,seg) {
+			$("#criterium").append($("<option>").val(seg.id).html(seg.name));
+		});
+		console.log(segments);
 	});
-	console.log(segments);
+
+
+
 });

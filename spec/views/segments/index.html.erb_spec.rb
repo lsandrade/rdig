@@ -5,11 +5,9 @@ RSpec.describe "segments/index", type: :view do
     assign(:segments, [
       Segment.create!(
         :name => "Name",
-        :criterium_id => 1
       ),
       Segment.create!(
         :name => "Name",
-        :criterium_id => 1
       )
     ])
   end

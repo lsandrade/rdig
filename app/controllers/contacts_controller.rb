@@ -71,4 +71,16 @@ class ContactsController < ApplicationController
     def contact_params
       params.require(:contact).permit(:name, :email, :age, :uf, :job)
     end
+
+
+    def get_segmented
+
+      segment = Segment.where("id = ",params[:citerium])
+
+      criteria = Criterium.where("segment_id = ",segment.id)
+
+      for citerium in criteria
+        print criterium
+      end
+    end
 end

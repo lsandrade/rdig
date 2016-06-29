@@ -35,5 +35,15 @@ describe '/api/v1/contacts', :type => :api do
 		expect(204).to eq(last_response.status)
 
 	end
-	
+'''
+	it "testando api de segmentação" do
+
+		post "#{url}/#get_segmented", :criterium => 14
+
+		segment_json = JSON.parse last_response.body
+
+		print segment_json
+
+	end
+'''	
 end
